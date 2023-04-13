@@ -1,0 +1,31 @@
+#azul{
+    background-image: url(../images/imagenes/fondo-planeta-ufoweb.co-1.jpg);
+    background-size: cover;
+    z-index: 1;
+
+    #verde{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    
+        #gris{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            img{
+                width: 150px;
+                z-index: 0;
+            }
+    
+            h1{
+                color: white;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+

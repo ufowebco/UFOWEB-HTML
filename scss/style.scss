@@ -3,3 +3,15 @@
 @import "./header";
 @import "./footer";
 @import "./reset";
+
+@import "./1inicio";
+
+#verde{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F87223;
+    border-radius: 4px; 
+}
