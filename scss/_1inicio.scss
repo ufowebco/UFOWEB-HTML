@@ -1,3 +1,7 @@
+main{
+    background-color: black;
+}
+
 #azul{
     background-image: url(../images/imagenes/fondo-planeta-ufoweb.co-1.jpg);
     background-size: cover;
@@ -23,6 +27,19 @@
             h1{
                 color: white;
                 margin-top: 50px;
+            }
+        }
+
+        .caja-serv{
+            padding: 50px;
+
+            .card {
+                width: 190px;
+                height: 254px;
+                border-radius: 30px;
+                background: #d0e210;
+                box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
             }
         }
     }

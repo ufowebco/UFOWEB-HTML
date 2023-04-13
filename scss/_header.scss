@@ -40,10 +40,12 @@ div#menu {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin-top: 50px;
 
         ul {
             list-style: none;
             display: block;
+            padding-top: 15px;
 
             li {
                 margin-top: 0;
@@ -119,7 +121,6 @@ div#menu.open {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
 }
-
 
 @media(min-width:768px){
 

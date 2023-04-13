@@ -8,14 +8,25 @@ footer{
             display: flex;
             flex-direction: row;
             
+            
             .caj-cont{
                 width: 100%;
             }
 
             .caj-logo{
+                justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
 
                 img{
-                    width: 250px;
+                    width: 350px;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    color: white;
+                    font-size: 18px;
+                    text-align: justify;
                 }
             }
 
@@ -23,35 +34,50 @@ footer{
                 display: flex;
                 flex-direction: row;
                 margin-top: 50px;
+                padding: 50px 0 50px 0;
+                border-top: #d0e210 1px solid;
 
                 div{
                     display: flex;
                     flex-direction: column;
+                }
+            }
 
-                    img{
-                        width: 30px;
-                    }
+            .caj-faq{
+                margin-top: 50px;
 
-                    a{
-                        font-size: 22px;
-                        font-weight: 500;
-                        letter-spacing: 2px;
-                        text-decoration: none;
-                        color: white;
-                        margin-top: 8px;
-                        cursor: pointer;
-                        background-color: #000000;
-                        border-radius: 8px;
-                        padding: 2px 5px 2px 5px;
+                ul{
+                    
+                    li{
+                        list-style: none;
 
-                        &:hover{
-                            background-color: #d0e210;
-                            color: black;
-                            border-radius: 8px;
-                            padding: 2px 5px 2px 5px;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            letter-spacing: 2px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            
+                            &:hover{
+                                color: #d0e210;
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .copy{
+        background-color: #d0e210;
+        padding: 10px 0 10px 0;
+        
+        #verde2{
+            
+            p{
+                margin: 0;
+                font-weight: 600;
+                font-size: 18px;
             }
         }
     }

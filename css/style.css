@@ -26,6 +26,7 @@
   size: 25px;
 }
 
+/*-- BOTON FOOTER --*/
 .button {
   margin: 0;
   height: auto;
@@ -44,7 +45,6 @@
   text-decoration: none;
   font-size: var(--fs-size);
   position: relative;
-  text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
@@ -65,6 +65,88 @@
 .button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/*-- BOTON REDES --*/
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #000000;
+  border-radius: 50%;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #000000;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #000000;
+  bottom: -3px;
+  left: 20%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .icon-red:hover,
+.wrapper .icon-red:hover .tooltip,
+.wrapper .icon-red:hover .tooltip::before {
+  background: #d0e210;
+  color: #000000;
+}
+
+.wrapper .icon-red:hover,
+.wrapper .icon-red:hover,
+.wrapper .icon-red:hover {
+  background: #000000;
+  color: #000000;
 }
 
 div#navigation {
@@ -106,10 +188,12 @@ div#menu nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 50px;
 }
 div#menu nav ul {
   list-style: none;
   display: block;
+  padding-top: 15px;
 }
 div#menu nav ul li {
   margin-top: 0;
@@ -206,38 +290,55 @@ footer #verde .caj-footer {
 footer #verde .caj-footer .caj-cont {
   width: 100%;
 }
+footer #verde .caj-footer .caj-logo {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 footer #verde .caj-footer .caj-logo img {
-  width: 250px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+footer #verde .caj-footer .caj-logo p {
+  color: white;
+  font-size: 18px;
+  text-align: justify;
 }
 footer #verde .caj-footer .caj-menu {
   display: flex;
   flex-direction: row;
   margin-top: 50px;
+  padding: 50px 0 50px 0;
+  border-top: #d0e210 1px solid;
 }
 footer #verde .caj-footer .caj-menu div {
   display: flex;
   flex-direction: column;
 }
-footer #verde .caj-footer .caj-menu div img {
-  width: 30px;
+footer #verde .caj-footer .caj-faq {
+  margin-top: 50px;
 }
-footer #verde .caj-footer .caj-menu div a {
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-decoration: none;
+footer #verde .caj-footer .caj-faq ul li {
+  list-style: none;
+}
+footer #verde .caj-footer .caj-faq ul li a {
   color: white;
-  margin-top: 8px;
-  cursor: pointer;
-  background-color: #000000;
-  border-radius: 8px;
-  padding: 2px 5px 2px 5px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 600;
 }
-footer #verde .caj-footer .caj-menu div a:hover {
+footer #verde .caj-footer .caj-faq ul li a:hover {
+  color: #d0e210;
+}
+footer .copy {
   background-color: #d0e210;
-  color: black;
-  border-radius: 8px;
-  padding: 2px 5px 2px 5px;
+  padding: 10px 0 10px 0;
+}
+footer .copy #verde2 p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 * {
@@ -256,6 +357,10 @@ footer #verde .caj-footer .caj-menu div a:hover {
 ::selection {
   background-color: #25d366;
   color: #000000;
+}
+
+main {
+  background-color: black;
 }
 
 #azul {
@@ -283,6 +388,16 @@ footer #verde .caj-footer .caj-menu div a:hover {
   color: white;
   margin-top: 50px;
 }
+#azul #verde .caja-serv {
+  padding: 50px;
+}
+#azul #verde .caja-serv .card {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #d0e210;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
 
 @media (min-width: 768px) {
   #azul #verde #gris img {
@@ -294,6 +409,11 @@ footer #verde .caj-footer .caj-menu div a:hover {
   }
 }
 #verde {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#verde2 {
   max-width: 1200px;
   margin: 0 auto;
 }
