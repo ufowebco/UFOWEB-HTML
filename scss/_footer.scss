@@ -1,0 +1,58 @@
+footer{
+    background-color: #000000;
+
+    #verde{
+        padding: 85px 0 85px 0;
+
+        .caj-footer{
+            display: flex;
+            flex-direction: row;
+            
+            .caj-cont{
+                width: 100%;
+            }
+
+            .caj-logo{
+
+                img{
+                    width: 250px;
+                }
+            }
+
+            .caj-menu{
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+
+                    img{
+                        width: 30px;
+                    }
+
+                    a{
+                        font-size: 22px;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        text-decoration: none;
+                        color: white;
+                        margin-top: 8px;
+                        cursor: pointer;
+                        background-color: #000000;
+                        border-radius: 8px;
+                        padding: 2px 5px 2px 5px;
+
+                        &:hover{
+                            background-color: #d0e210;
+                            color: black;
+                            border-radius: 8px;
+                            padding: 2px 5px 2px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

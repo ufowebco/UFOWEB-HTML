@@ -13,12 +13,58 @@
   font-family: "Rajdhani", sans-serif;
 }
 
+::selection {
+  background-color: #25d366;
+  color: #000000;
+}
+
 .wq {
   background-color: 0;
 }
 
 .gee {
   size: 25px;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 20px;
+}
+
+.button {
+  --border-right: 0.5px;
+  --text-stroke-color: rgba(255, 255, 255, 255);
+  --animation-color: #d0e210;
+  --fs-size: 1.3em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
 div#navigation {
@@ -147,6 +193,53 @@ div#menu.open nav ul li {
     right: 100px;
   }
 }
+footer {
+  background-color: #000000;
+}
+footer #verde {
+  padding: 85px 0 85px 0;
+}
+footer #verde .caj-footer {
+  display: flex;
+  flex-direction: row;
+}
+footer #verde .caj-footer .caj-cont {
+  width: 100%;
+}
+footer #verde .caj-footer .caj-logo img {
+  width: 250px;
+}
+footer #verde .caj-footer .caj-menu {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+footer #verde .caj-footer .caj-menu div {
+  display: flex;
+  flex-direction: column;
+}
+footer #verde .caj-footer .caj-menu div img {
+  width: 30px;
+}
+footer #verde .caj-footer .caj-menu div a {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  margin-top: 8px;
+  cursor: pointer;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 2px 5px 2px 5px;
+}
+footer #verde .caj-footer .caj-menu div a:hover {
+  background-color: #d0e210;
+  color: black;
+  border-radius: 8px;
+  padding: 2px 5px 2px 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -158,6 +251,11 @@ div#menu.open nav ul li {
 * body {
   background-color: rgba(0, 0, 0, 0);
   font-family: "Rajdhani", sans-serif;
+}
+
+::selection {
+  background-color: #25d366;
+  color: #000000;
 }
 
 #azul {
@@ -178,7 +276,7 @@ div#menu.open nav ul li {
   align-items: center;
 }
 #azul #verde #gris img {
-  width: 150px;
+  width: 200px;
   z-index: 0;
 }
 #azul #verde #gris h1 {
@@ -186,14 +284,18 @@ div#menu.open nav ul li {
   margin-top: 50px;
 }
 
+@media (min-width: 768px) {
+  #azul #verde #gris img {
+    width: 450px;
+  }
+  #azul #verde #gris h1 {
+    color: white;
+    margin-top: 50px;
+  }
+}
 #verde {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #F87223;
-  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
